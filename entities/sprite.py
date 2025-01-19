@@ -43,6 +43,14 @@ class Piece(Sprite) :
             return True
         return False
     
+    def get_piece_direction(self, line : bool, diag : bool) -> list : 
+        directions = []        
+        if line :
+            directions.extend(((1, 0),(-1, 0),(0, 1),(0, -1)))
+        if diag : 
+            directions.extend(((1, 1),(1, -1),(-1, -1),(-1, 1)))
+        return directions
+    
     def get_move_direction(self, pos, coord):
         dx= coord[0]-pos[0]
         dy= coord[1]-pos[1]
@@ -50,6 +58,7 @@ class Piece(Sprite) :
         dy_normalized = 0 if dy == 0 else dy // abs(dy)
     
         return (dx_normalized, dy_normalized)
+        
         
         
     

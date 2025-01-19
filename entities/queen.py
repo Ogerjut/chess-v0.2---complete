@@ -2,7 +2,9 @@ from entities.sprite import Piece
 
 class Queen(Piece):
     def __init__(self, x, y, tile, color ):
-        self.rule_move = [(1, 1),(1, -1),(-1, -1),(-1, 1), (1, 0),(-1, 0),(0, 1),(0, -1)]   
+        # self.rule_move = [(1, 1),(1, -1),(-1, -1),(-1, 1), (1, 0),(-1, 0),(0, 1),(0, -1)] 
+        self.rule_move = self.get_piece_direction(True, True)
+        print(self.rule_move)
         super().__init__(x, y, tile, color, self.rule_move)
     
     def get_moves(self, init_coord, game):
