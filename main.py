@@ -12,10 +12,13 @@ from core.game import Game
 from gui.gui import *
 from gui.main_menu import MainMenu
 
+VERSION = 0.2
+
 class App:
     def __init__(self) -> None:
         self.isRunning = True
         self.window = pygame.display.set_mode((768,768))
+        pygame.display.set_caption(f'Chess Game {VERSION} ')
         self.clock = pygame.time.Clock()
         
         self.gui = GUI(self.window)

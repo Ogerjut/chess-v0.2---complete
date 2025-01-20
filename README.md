@@ -1,12 +1,16 @@
 
 
-CHESS GAME (NO AI, NO ONLINE MODE)
+CHESS GAME (NOT AI, NOT ONLINE MODE)
 
 Developped with pygame and OOP paradigm
 
-Improvments I wanna include : 
+Improvments I wanna include in 0.3 version : 
+- pawn promotion pannel
 - MVC Architecture
 - Game states with State design pattern
-- using pygame.Vector2() for pieces coord (easier to calculate distance, normalize)
-- improving the move_manager files : computing all the possibles moves once a piece is moved before the begging of another turn
+- to use pygame.Vector2() for pieces coord (easier to calculate distance, normalize direction...)
+- improving the move_manager file : computing all the possible moves once a piece is moved before the beggining of another turn
+- better UI (game icon, captured pieces icons, turns number, moves logs...)
+- PEP8 formating
+- constants file & magics numbers
 
